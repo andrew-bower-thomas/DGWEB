@@ -1,0 +1,40 @@
+@font-face {
+	font-family: RobotoMedium;
+	src: url(../fonts/Roboto-Medium.ttf);
+}
+
+html, body, #root {
+	height: 100%;
+	overflow: hidden;
+}
+
+#app {
+	overflow: auto;
+	font-family: RobotoMedium;
+	transition: background-image 3s ease-in-out;
+	/*background-image: url(https://image.shutterstock.com/image-photo/swing-seat-600w-121483045.jpg);*/
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+a {
+	color: #0366d6;
+}
+
+code {
+	color: #E01A76;
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: #1b6ec2;
+	border-color: #1861ac;
+}
+
+.tab-content {
+	background-color: rgba(124, 124, 124, 0.8);
+	text-align: center;
+}

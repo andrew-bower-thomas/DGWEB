@@ -26,7 +26,7 @@ namespace DGWEB
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
-                configuration.RootPath = "ClientApp/build";
+                configuration.RootPath = "DGReactApp/build";
             });
         }
 
@@ -59,7 +59,7 @@ namespace DGWEB
 
             app.UseSpa(spa =>
             {
-                spa.Options.SourcePath = "ClientApp";
+                spa.Options.SourcePath = "DGReactApp";
 
                 if (env.IsDevelopment())
                 {
