@@ -1,0 +1,28 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+body {
+    /*background-color: blue;*/
+    transition: background-image 1s ease;
+    /* The image used */
+    /*background-image: url(https://image.shutterstock.com/image-photo/swing-seat-600w-121483045.jpg);*/
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
