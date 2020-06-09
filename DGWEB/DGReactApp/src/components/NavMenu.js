@@ -10,15 +10,11 @@ export class NavMenu extends Component {
 		super(props);
 
 		this.toggleNavbar = this.toggleNavbar.bind(this);
-		this.state = {
-			collapsed: true
-		};
+		this.state = { collapsed: true };
 	}
 
 	toggleNavbar () {
-		this.setState({
-			collapsed: !this.state.collapsed
-		});
+		this.setState({ collapsed: !this.state.collapsed });
 	}
 
 	render () {

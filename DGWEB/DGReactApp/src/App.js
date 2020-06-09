@@ -8,47 +8,67 @@ import { OurWork } from './components/OurWork';
 import { ContactUs } from './components/ContactUs';
 
 import './assets/css/styles.css'
-//import image1 from './assets/images/ashkan-forouzani-XGrLnJTYVfM-unsplash.jpg';
-//import image2 from './assets/images/crystal-jo-BHa4u8NmBIg-unsplash.jpg';
-//import image3 from './assets/images/juli-kosolapova-lXEfvemtIsA-unsplash.jpg';
-//import image4 from './assets/images/utsav-shah-0qmIJOcCtbs-unsplash.jpg';
-
-var images = ["https://images.unsplash.com/photo-1522426266214-ec2d2abb9ce0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&h=500",
-			  "https://images.unsplash.com/photo-1591296899037-86229af2f270?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&h=500",
-			  "https://images.unsplash.com/photo-1591280371978-0a9043ff6348?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&h=500",
-			  "https://images.unsplash.com/photo-1591243320228-b224bc77a38d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&h=500"];
+import image1 from './assets/images/ashkan-forouzani-XGrLnJTYVfM-unsplash.jpg';
+import image2 from './assets/images/crystal-jo-BHa4u8NmBIg-unsplash.jpg';
+import image3 from './assets/images/juli-kosolapova-lXEfvemtIsA-unsplash.jpg';
+import image4 from './assets/images/utsav-shah-0qmIJOcCtbs-unsplash.jpg';
+import monaLisa1 from './assets/images/mona-lisa.jpg';
+import monaLisa2 from './assets/images/mona-lisa.jpg';
+var BackgroundImages = [image1, image2, image3, image4];
+var AllImages = [image1, image2, image3, image4, monaLisa1, monaLisa2];
 
 export default class App extends Component {
 	static displayName = App.name;
 	constructor(props) {
 		super(props);
 		this.state = {
-			backgroundImage: images[0]
+			isLoading: true,
+			backgroundImage: BackgroundImages[0]
 		};
-    }
+	}
 
 	componentDidMount() {
-		this.setNextBackgroundImg();
-		this.interval = setInterval(() => { this.setNextBackgroundImg(); }, 5000);
+		this.preloadImages();
 	}
 
 	componentWillUnmount() {
 		clearInterval(this.interval);
 	}
 
-	setNextBackgroundImg() {
-		for (var i = 0; i < images.length; i++) {
-			if (this.state.backgroundImage === images[i]) {
-				this.setState({ backgroundImage: images[(i + 1) % images.length] });
+	preloadImages() {
+		//https://stackoverflow.com/questions/42615556/how-to-preload-images-in-react-js
+		AllImages.forEach((image) => {
+			const newImage = new Image();
+			newImage.src = image;
+			window[image] = newImage;
+		});
+    }
+
+	setNextBackgroundImage() {
+		for (var i = 0; i < BackgroundImages.length; i++) {
+			if (this.state.backgroundImage === BackgroundImages[i]) {
+				this.setState({ backgroundImage: BackgroundImages[(i + 1) % BackgroundImages.length] });
 				break;
             }
 		}
 	}
 
+	handleImageLoaded() {
+		document.getElementById("progress-indicator").style.display = "none";
+		this.setState({ isLoading: false });
+		this.interval = setInterval(() => { this.setNextBackgroundImage(); }, 5000);
+	}
+
 	render() {
+		const style = {
+			backgroundImage: `url(${this.state.backgroundImage})`,
+			opacity: this.state.isLoading ? "0" : "1"
+		}
 		return (
-			<div style={{ backgroundImage: `url(${this.state.backgroundImage})` }} id="app">
-				<Layout>
+			<div id="app" style={style}>
+				{/* This img tag is used to let us know when the first background image has been loaded */}
+				<img src={BackgroundImages[0]} alt="" style={{ display: "none" }} onLoad={this.handleImageLoaded.bind(this)} />
+				<Layout style={{ display: "none" }}>
 					<Route exact path='/' component={Home} />
 					<Route path='/what-we-do' component={WhatWeDo} />
 					<Route path='/who-we-are' component={WhoWeAre} />
