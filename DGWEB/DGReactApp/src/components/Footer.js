@@ -6,7 +6,7 @@ export class Footer extends Component {
 
 	render() {
 		return (
-				<footer className="footer section" id="contact-us">
+				<footer className="footer" id="footer">
 					<h2 className="section-title">Contact Us</h2>
 					<div className="footer-content">
 						<p>

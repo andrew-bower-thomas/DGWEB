@@ -10,10 +10,10 @@ export class Layout extends Component {
 		return (
 			<div className="flex-wrapper">
 				<NavMenu className="no-flex"/>
-				<Container className="flex">
+				<Container className="flex container">
 					{this.props.children}
 				</Container>
-				<Footer className="no-flex" />				
+				<Footer className="no-flex" />
 			</div>
 		);
 	}
