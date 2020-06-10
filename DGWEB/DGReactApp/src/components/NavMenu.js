@@ -16,7 +16,7 @@ export class NavMenu extends Component {
 
 	onNavLinkClick() {
 		this.setState({ collapsed: true });
-    }
+	}
 
 	toggleNavbar () {
 		this.setState({ collapsed: !this.state.collapsed });
@@ -30,7 +30,7 @@ export class NavMenu extends Component {
 						<NavbarBrand tag={RRNavLink} to="/"><img src={Logo} alt="DevGroup" className="logo" /></NavbarBrand>
 						<NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
 						<Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
-								<ul className="navbar-nav flex-grow">
+							<ul className="navbar-nav flex-grow">
 								<NavItem>
 									<NavLink exact tag={RRNavLink} onClick={this.onNavLinkClick} className="text-dark" activeClassName="" to="/">
 										Home
@@ -55,9 +55,8 @@ export class NavMenu extends Component {
 									<NavLink exact tag={RRNavLink} onClick={this.onNavLinkClick} className="text-dark" activeClassName="" to="/contact-us">
 										Contact&nbsp;Us
 									</NavLink>
-									</NavItem>
-									
-								</ul>
+								</NavItem>
+							</ul>
 						</Collapse>
 					</Container>
 				</Navbar>
