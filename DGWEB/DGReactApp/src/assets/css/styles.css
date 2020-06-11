@@ -1,6 +1,21 @@
 @font-face {
-	font-family: RobotoMedium;
-	src: url(../fonts/Roboto-Medium.ttf);
+	font-family: DINProBlack;
+	src: url("../fonts/DINPro-Black tr.woff");
+}
+
+@font-face {
+	font-family: DINProBold;
+	src: url("../fonts/DINPro-Bold tr.woff");
+}
+
+@font-face {
+	font-family: DINProLight;
+	src: url("../fonts/DINPro-Light tr.woff");
+}
+
+@font-face {
+	font-family: DINProMedium;
+	src: url("../fonts/DINPro-Medium tr.woff");
 }
 
 html, body, #root {
@@ -23,7 +38,8 @@ body {
 }
 
 #app {
-	font-family: RobotoMedium;
+	font-family: DINProMedium;
+	color: black;
 	height: 100%;
 }
 
@@ -49,26 +65,21 @@ body {
 	background-position: 50% 50%;
 	opacity: 0;
 	z-index: 0;
-	animation: imageAnimation 40s linear infinite 0s;
+	animation: imageAnimation 30s linear infinite 0s;
 }
 
 #background-image-1 {
-	background-image: url(../images/ashkan-forouzani-XGrLnJTYVfM-unsplash.jpg);
+	background-image: url(../images/florian-wehde-V4cHacmEnW8-unsplash.jpg);
 }
 
 #background-image-2 {
-	background-image: url(../images/crystal-jo-BHa4u8NmBIg-unsplash.jpg);
+	background-image: url("../images/aditya-vyas-7ygsBEajOG0-unsplash.jpg");
 	animation-delay: 10s;
 }
 
 #background-image-3 {
-	background-image: url(../images/juli-kosolapova-lXEfvemtIsA-unsplash.jpg);
+	background-image: url("../images/colton-duke-UExx0KnnkjY-unsplash.jpg");
 	animation-delay: 20s;
-}
-
-#background-image-4 {
-	background-image: url(../images/utsav-shah-0qmIJOcCtbs-unsplash.jpg);
-	animation-delay: 30s;
 }
 
 @keyframes imageAnimation {
@@ -76,15 +87,15 @@ body {
 		opacity: 0;
 	}
 
-	5% {
+	6% {
 		opacity: 1;
 	}
 
-	25% {
+	34% {
 		opacity: 1
 	}
 
-	30% {
+	40% {
 		opacity: 0
 	}
 
@@ -93,7 +104,14 @@ body {
 	}
 }
 
-.container {
+/*.jumbotron {
+	position: relative;
+	margin: 0px 10px 10px 10px;
+	padding: 0;
+	background-color: transparent;
+}*/
+
+.tab-container {
 	position: relative;
 }
 
@@ -112,7 +130,6 @@ body {
 }
 
 .tab-content {
-	background-color: rgba(124, 124, 124, 0.8);
 	text-align: center;
-	margin-bottom: 1rem;
+	background-color: rgba(255,255,255,0.9);
 }

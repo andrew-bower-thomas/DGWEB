@@ -1,42 +1,48 @@
 ﻿.navbar {
-	background-color: rgba(124, 124, 124, 0.6);
+	background-color: rgba(255,255,255,0.9);
+	padding: 0;
 }
 
-.box-shadow {
-	box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-.logo {
+#logo-navbar {
 	width: 150px;
 	height: auto;
 }
 
 @media (min-width: 576px) {
-	.logo {
+	#logo-navbar {
 		width: 100%;
 		max-width: 250px;
 	}
 }
 
-/* Style tab links */
-/*.tablink {
-	background-color: #555;
-	float: left;
-	outline: none;
-	cursor: pointer;
-	padding: 14px 16px;
-	font-size: 17px;
-	background-color: transparent;
-	transition: all 0.1s ease-in-out;
+.nav-link {
+	/*color: #1522f1;*/
+	/*color: #278363;*/
+	color: black;
 	border-width: 0;
 	border-style: solid;
-	border-color: white;
+	border-color: #1522f1;
+	transition: background-color 0.1s ease-in-out;
 }
 
-.tablink:hover {
-	border-width: 0 0 1px 0;
+.nav-link.active {
+	color: black;
+	border-width: 0 0 2px 0;
 }
 
-.tablink.active {
-	border-width: 0 0 1px 0;
-}*/
+.nav-link:hover {
+	color: black;
+	background-color: rgba(39, 131, 99, 0.3);
+}
+
+.nav-link:hover:not(.active) {
+	
+}
+
+/*https://www.geeksforgeeks.org/how-to-change-hamburger-toggler-color-in-bootstrap/*/
+.navbar-toggler {
+	border-color: black;
+}
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8, %3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}

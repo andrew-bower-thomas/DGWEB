@@ -7,11 +7,8 @@ export class Footer extends Component {
 	render() {
 		return (
 				<footer className="footer" id="footer">
-					<h2 className="section-title">Contact Us</h2>
 					<div className="footer-content">
-						<p>
-							Email: devgroup@devgroup.com
-						</p>
+						Contact Email: dev@devgroup.co
 					</div>
 				</footer>
 		);

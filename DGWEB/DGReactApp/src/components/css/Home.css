@@ -1,3 +1,20 @@
-﻿#home {
-	background-color: transparent;
+﻿@font-face {
+	font-family: DINProBold;
+	src: url("../../assets/fonts/DINPro-Bold tr.woff");
+}
+
+#home {
+	position: absolute;
+	width: 100%;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -35%);
+	background-color: rgba(255,255,255,0.5);
+	font-family: DINProBold;
+	font-size: 1.5em;
+}
+
+#logo-home {
+	width: 90%;
+	max-width: 350px;
 }

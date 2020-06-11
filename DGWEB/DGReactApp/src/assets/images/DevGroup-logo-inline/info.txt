@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: WorkSans-Regular
+font link: https://fonts.google.com/specimen/Work+Sans
+font author: Wei Huang
+font author site: 
+
+
+icon designer: iconfield
+icon designer link: /iconfield
+        
+{"bg":"transparent","icon-gradient-0":"#288B58","icon-gradient-1":"#1522F1","font":"#000000","slogan":"#141414"}
+      

@@ -6,11 +6,11 @@ import { Footer } from './Footer';
 export class Layout extends Component {
 	static displayName = Layout.name;
 
-	render () {
+	render() {
 		return (
 			<div className="flex-wrapper">
-				<NavMenu className="no-flex"/>
-				<Container className="flex container">
+				<NavMenu className="no-flex" />
+				<Container className="flex tab-container" fluid>
 					{this.props.children}
 				</Container>
 				<Footer className="no-flex" />
