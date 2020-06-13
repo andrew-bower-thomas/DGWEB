@@ -1,5 +1,6 @@
 ﻿import React, { Component } from 'react';
 import './css/OurWork.css';
+import './css/TabContent.css';
 
 export class OurWork extends Component {
 	static displayName = OurWork.name;
@@ -7,39 +8,55 @@ export class OurWork extends Component {
 	render() {
 		return (
 			<div className="tab-content" id="our-work">
-				<h1>Chapter 4. Conspiracy</h1>
-				<p>
-					Danglars followed Edmond and Mercédès with his eyes until the two lovers disappeared behind one of the angles of Fort Saint Nicolas; then, turning round, he perceived Fernand, who had fallen, pale and trembling, into his chair, while Caderousse stammered out the words of a drinking-song.
-
-					“Well, my dear sir,” said Danglars to Fernand, “here is a marriage which does not appear to make everybody happy.”
-
-					“It drives me to despair,” said Fernand.
-
-					“Do you, then, love Mercédès?”
-
-					“I adore her!”
-
-					“For long?”
-
-					“As long as I have known her—always.”
-
-					
-					“I will not.”
-
-					“What do you mean? you will not? Well, just as you like, my prince; there’s liberty for all the world. Come along, Danglars, and let the young gentleman return to the Catalans if he chooses.”
-
-					Danglars took advantage of Caderousse’s temper at the moment, to take him off towards Marseilles by the Porte Saint-Victor, staggering as he went.
-
-					When they had advanced about twenty yards, Danglars looked back and saw Fernand stoop, pick up the crumpled paper, and putting it into his pocket then rush out of the arbor towards Pillon.
-
-					“Well,” said Caderousse, “why, what a lie he told! He said he was going to the Catalans, and he is going to the city. Hallo, Fernand! You are coming, my boy!”
-
-					“Oh, you don’t see straight,” said Danglars; “he’s gone right by the road to the Vieilles Infirmeries.”
-
-					“Well,” said Caderousse, “I should have sworn that he turned to the right—how treacherous wine is!”
-
-					“Come, come,” said Danglars to himself, “now the thing is at work and it will effect its purpose unassisted.”
-				</p>
+				<div className="tab-header">OUR WORK</div>
+				<div className="info-header">
+					We are a team of engineers who pride ourselves on being able to learn anything and take on any challenge.
+				</div>
+				<div className="info-container">
+					<img src="" style={{ backgroundColor: "red" }} alt="Project1Image" className="info-image" />
+					<div className="info-text info-text-right">
+						<div className="info-text-header">PROJECT1</div>
+						<p>
+							I have, myself, full confidence that if all do their duty, if nothing is neglected, and if the best arrangements are made, as they are being made, we shall prove ourselves once 
+							again able to defend our Island home, to ride out the storm of war, and to outlive the menace of tyranny, if necessary for years, if necessary alone. At any rate, that is what 
+							we are going to try to do. That is the resolve of His Majesty’s Government-every man of them. That is the will of Parliament and the nation. The British Empire and the French 
+							Republic, linked together in their cause and in their need, will defend to the death their native soil, aiding each other like good comrades to the utmost of their strength. 
+							Even though large tracts of Europe and many old and famous States have fallen or may fall into the grip of the Gestapo and all the odious apparatus of Nazi rule, we shall not 
+							flag or fail. We shall go on to the end, we shall fight in France, we shall fight on the seas and oceans, we shall fight with growing confidence and growing strength in the 
+							air, we shall defend our Island, whatever the cost may be, we shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, 
+							we shall fight in the hills; we shall never surrender, and even if, which I do not for a moment believe, this Island or a large part of it were subjugated and starving, then 
+							our Empire beyond the seas, armed and guarded by the British Fleet, would carry on the struggle, until, in God’s good time, the New World, with all its power and might, steps 
+							forth to the rescue and the liberation of the old.
+						</p>
+					</div>
+				</div>
+				<div className="info-container">
+					<div className="info-text info-text-left">
+						<div className="info-text-header">PROJECT2</div>
+						<p>
+							What General Weygand called the Battle of France is over. I expect that the Battle of Britain is about to begin. Upon this battle depends the survival of Christian civilization. 
+							Upon it depends our own British life, and the long continuity of our institutions and our Empire. The whole fury and might of the enemy must very soon be turned on us. Hitler 
+							knows that he will have to break us in this Island or lose the war. If we can stand up to him, all Europe may be free and the life of the world may move forward into broad, 
+							sunlit uplands. But if we fail, then the whole world, including the United States, including all that we have known and cared for, will sink into the abyss of a new Dark Age 
+							made more sinister, and perhaps more protracted, by the lights of perverted science. Let us therefore brace ourselves to our duties, and so bear ourselves that if the British 
+							Empire and its Commonwealth last for a thousand years, men will still say, ‘This was their finest hour.’
+						</p>
+					</div>
+					<img src="" style={{ backgroundColor: "purple"}} alt="Project2Image" className="info-image" />
+				</div>
+				<div className="info-container">
+					<img src="" style={{ backgroundColor: "blue" }} alt="Project3Image" className="info-image" />
+					<div className="info-text info-text-right">
+						<div className="info-text-header">PROJECT3</div>
+						<p>
+							I say to the House as I said to ministers who have joined this government, I have nothing to offer but blood, toil, tears, and sweat. We have before us an ordeal of the most 
+							grievous kind. We have before us many, many months of struggle and suffering. You ask, what is our policy? I say it is to wage war by land, sea, and air. War with all our might 
+							and with all the strength God has given us, and to wage war against a monstrous tyranny never surpassed in the dark and lamentable catalogue of human crime. That is our policy. 
+							You ask, what is our aim? I can answer in one word. It is victory. Victory at all costs – Victory in spite of all terrors – Victory, however long and hard the road may be, for 
+							without victory there is no survival.
+						</p>
+					</div>
+				</div>
 			</div>
 		);
 	}

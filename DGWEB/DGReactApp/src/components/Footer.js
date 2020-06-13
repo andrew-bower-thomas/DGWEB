@@ -6,11 +6,11 @@ export class Footer extends Component {
 
 	render() {
 		return (
-				<footer className="footer" id="footer">
-					<div className="footer-content">
-						Contact Email: dev@devgroup.co
-					</div>
-				</footer>
+			<footer className="footer" id="footer">
+				<div className="footer-content">
+					Contact Email: dev@devgroup.co
+				</div>
+			</footer>
 		);
 	}
 }

@@ -7,6 +7,7 @@ import { WhoWeAre } from './components/WhoWeAre';
 import { OurWork } from './components/OurWork';
 import { ContactUs } from './components/ContactUs';
 import './assets/css/styles.css'
+import './assets/css/background.css';
 
 export default class App extends Component {
 	static displayName = App.name;

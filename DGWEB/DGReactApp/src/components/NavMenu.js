@@ -33,27 +33,27 @@ export class NavMenu extends Component {
 							<ul className="navbar-nav flex-grow">
 								<NavItem>
 									<NavLink exact tag={RRNavLink} onClick={this.handleOnClick} className="" activeClassName="active" to="/">
-										Home
+										HOME
 									</NavLink>
 								</NavItem>
 								<NavItem>
 									<NavLink exact tag={RRNavLink} onClick={this.handleOnClick} className="" activeClassName="active" to="/what-we-do">
-										What&nbsp;We&nbsp;Do
+										WHAT&nbsp;WE&nbsp;DO
 									</NavLink>
 								</NavItem>
 								<NavItem>
 									<NavLink exact tag={RRNavLink} onClick={this.handleOnClick} className="" activeClassName="active" to="/who-we-are">
-										Who&nbsp;We&nbsp;Are
+										WHO&nbsp;WE&nbsp;ARE
 									</NavLink>
 								</NavItem>
 								<NavItem>
 									<NavLink exact tag={RRNavLink} onClick={this.handleOnClick} className="" activeClassName="active" to="/our-work">
-										Our&nbsp;Work
+										OUR&nbsp;WORK
 									</NavLink>
 								</NavItem>
 								<NavItem>
 									<NavLink exact tag={RRNavLink} onClick={this.handleOnClick} className="" activeClassName="active" to="/contact-us">
-										Contact&nbsp;Us
+										CONTACT&nbsp;US
 									</NavLink>
 								</NavItem>
 							</ul>

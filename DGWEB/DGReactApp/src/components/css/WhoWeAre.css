@@ -1,14 +1,17 @@
 ﻿#who-we-are {
-	
+	text-align: center;
 }
 
 .profile {
-	width: 350px;
+	width: 90%;
+	max-width: 350px;
 	display: inline-block;
-	margin: 0 10px 10px 10px;
+	margin: 0 2em;
 	text-align: center;
+	vertical-align: top;
 }
 
 .profile-image {
 	width: 50%;
+	margin-bottom: 0.5em;
 }
