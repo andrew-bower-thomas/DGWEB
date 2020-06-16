@@ -27,7 +27,7 @@ export class WhoWeAre extends Component {
 	}
 }
 
-class Profile extends React.Component {
+class Profile extends Component {
 	render() {
 		return (
 			<div className="profile">

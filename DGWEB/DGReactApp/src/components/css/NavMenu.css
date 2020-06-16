@@ -16,12 +16,12 @@
 }
 
 .nav-link {
-	/*color: #1522f1;*/
-	/*color: #278363;*/
+	/*color: #1522F1;*/
+	/*color: #288B58;*/
 	color: black;
 	border-width: 0;
 	border-style: solid;
-	border-color: #1522f1;
+	border-color: #1522F1;
 	transition: background-color 0.1s ease-in-out;
 }
 
@@ -32,7 +32,7 @@
 
 .nav-link:hover {
 	color: black;
-	background-color: rgba(39, 131, 99, 0.5);
+	background-color: rgba(40, 139, 88, 0.5);
 }
 
 .nav-link:hover:not(.active) {
