@@ -20,14 +20,20 @@ export class Ticker extends Component {
 	}
 
 	async updateQuotes() {
-		const response = await fetch('api/quotes');
-		var data = await response.json();
-		if (data.length > 0) {
-			data.sort(function (a, b) {
-				return a.symbol.localeCompare(b.symbol);
-			});
+		try {
+			const response = await fetch('api/quotes');
+			console.log(response);
+			var data = await response.json();
+			//if (data.length > 0) {
+			//	data.sort(function (a, b) {
+			//		return a.symbol.localeCompare(b.symbol);
+			//	});
+			//}
+			this.setState({ quotes: data });
+		}
+		catch (e) {
+			console.log(e);
         }
-		this.setState({ quotes: data });
 	}
 
 	render() {
