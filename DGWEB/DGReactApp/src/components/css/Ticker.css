@@ -1,4 +1,44 @@
 ﻿#ticker {
+    
+}
+
+.ticker-wrap {
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.ticker-scroll {
+    animation: ticker 60s linear infinite;
+    display: inline-block;
+}
+
+@keyframes ticker {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.ticker-item {
+    display: inline-block;
+    padding: 0 3rem;
+    color: white;
+}
+
+.ticker-price {
+    display: inline-block;
+    width: 0;
+    transition: color linear 0.5s;
+}
+
+
+/*#ticker {
     overflow: hidden;
 }
 
@@ -23,6 +63,12 @@
     animation-name: ticker;
     -webkit-animation-duration: 40s;
     animation-duration: 40s;
+}
+
+@media only screen and (max-width: 768px) {
+    .ticker {
+        animation-duration: 20s;
+    }
 }
 
 @-webkit-keyframes ticker {
@@ -60,4 +106,4 @@
 .ticker-price {
     display: inline-block;
     width: 0;
-}
+}*/
