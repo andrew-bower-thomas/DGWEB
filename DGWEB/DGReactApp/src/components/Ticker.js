@@ -1,5 +1,4 @@
 ﻿import React, { Component } from 'react';
-import { CSSTransition } from "react-transition-group";
 import './css/Ticker.css';
 
 export class Ticker extends Component {
@@ -41,7 +40,7 @@ export class Ticker extends Component {
 			<div className="ticker-scroll">
 				{this.state.quotes.map((quote) => (
 					<div key={quote.symbol} className="ticker-item">
-						{quote.symbol}: <TickerPrice price={quote.price} />
+						{quote.symbol}:  <TickerPrice price={quote.price} />
 					</div>
 				))}
 			</div>);
@@ -52,15 +51,6 @@ export class Ticker extends Component {
 					{quotesContainer}
 					{quotesContainer}
 				</div>
-				{/*<div className="ticker-wrap">
-					<div className="ticker ticker1">
-						{this.state.quotes.map((quote) => (
-							<div key={quote.symbol} className="ticker-item">
-								{quote.symbol}: <TickerPrice price={quote.price} />
-							</div>
-						))}
-					</div>
-				</div>*/}
 			</div>
 		);
 	}
@@ -77,7 +67,7 @@ class TickerPrice extends Component {
 		super(props);
 		this.state = {
 			price: this.props.price,
-			textColor: textColors.WHITE
+			textColor: textColors.GREEN
 		};
 	}
 
@@ -100,6 +90,7 @@ class TickerPrice extends Component {
 		const style = {
 			color: this.state.textColor
 		};
-		return (<div style={style} className="ticker-price">{this.props.price.toFixed(2)}</div> );
+		return ( <div style={style} className="ticker-price">{this.props.price}</div> );
+		//return ( <div style={style} className="ticker-price">{this.props.price.toFixed(2)}</div>);
 	}
 }

@@ -8,7 +8,15 @@ namespace DGWEB.Models
     public class Quote
     {
         public string Symbol { get; set; }
-        public double Price { get; set; }
+        public decimal Price { get; set; }
+
+        public Quote() { }
+
+        public Quote(string symbol, decimal price)
+        {
+            Symbol = symbol;
+            Price = price;
+        }
     }
 }
 
