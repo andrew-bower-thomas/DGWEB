@@ -12,10 +12,11 @@
 
 .ticker-scroll {
     display: inline-block;
-    -webkit-animation: ticker 50s linear infinite;
-    -moz-animation: ticker 50s linear infinite;
-    -o-animation: ticker 50s linear infinite;
-    animation: ticker 50s linear infinite;
+    /* Keep animation delays. Scroll animation doesn't start on mobile Safari and Chrome without them. */
+    -webkit-animation: ticker 50s linear 1ms infinite;
+    -moz-animation: ticker 50s linear 1ms infinite;
+    -o-animation: ticker 50s linear 1ms infinite;
+    animation: ticker 50s linear 1ms infinite;
 }
 
 @keyframes ticker {

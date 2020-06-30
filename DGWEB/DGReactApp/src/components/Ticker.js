@@ -23,16 +23,11 @@ export class Ticker extends Component {
 			const response = await fetch('api/quotes');
 			console.log(response);
 			var data = await response.json();
-			//if (data.length > 0) {
-			//	data.sort(function (a, b) {
-			//		return a.symbol.localeCompare(b.symbol);
-			//	});
-			//}
 			this.setState({ quotes: data });
 		}
 		catch (e) {
 			console.log(e);
-        }
+		}
 	}
 
 	render() {

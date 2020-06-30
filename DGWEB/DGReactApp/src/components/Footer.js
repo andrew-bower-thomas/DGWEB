@@ -8,7 +8,7 @@ export class Footer extends Component {
 		return (
 			<footer className="footer" id="footer">
 				<div className="footer-content">
-					Contact Email: dev@devgroup.co
+					Contact Email: info@devgroup.co
 				</div>
 			</footer>
 		);
