@@ -1,0 +1,14 @@
+﻿#tz-screener-right {
+	background-color: #323167;
+	width: 200px;
+}
+
+#tz-screener-right table {
+	background-color: transparent;
+	color: white;
+	word-break: break-all
+}
+
+#tz-screener-right tbody {
+	font-size: 0.65em;
+}

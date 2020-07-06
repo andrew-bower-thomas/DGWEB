@@ -4,8 +4,6 @@ import './css/TabContent.css';
 import LogoStack from '../assets/images/logo-stack.png'; //https://www.namecheap.com/logo-maker/app/new
 
 export class Home extends Component {
-	static displayName = Home.name;
-
 	render() {
 		return (
 			<div className="tab-content" id="home">

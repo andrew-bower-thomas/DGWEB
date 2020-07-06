@@ -1,0 +1,12 @@
+﻿#tz-screener {
+    background-color: black;
+}
+
+#tz-screener-header {
+    text-align: center;
+    padding: 15px;
+}
+
+#tz-screener-header > img {
+    width: 200px;
+}

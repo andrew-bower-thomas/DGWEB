@@ -2,38 +2,10 @@
 import './css/Ticker.css';
 
 export class Ticker extends Component {
-	static displayName = Ticker.name;
-
-	constructor(props) {
-		super(props);
-		this.state = { quotes: [] };
-	}
-
-	componentDidMount() {
-		this.updateQuotes();
-		this.interval = setInterval(() => { this.updateQuotes(); }, 3000);
-	}
-
-	componentWillUnmount() {
-		clearInterval(this.interval);
-	}
-
-	async updateQuotes() {
-		try {
-			const response = await fetch('api/quotes');
-			console.log(response);
-			var data = await response.json();
-			this.setState({ quotes: data });
-		}
-		catch (e) {
-			console.log(e);
-		}
-	}
-
 	render() {
 		const quotesContainer = (
 			<div className="ticker-scroll">
-				{this.state.quotes.map((quote) => (
+				{this.props.liveQuotes.map((quote) => (
 					<div key={quote.symbol} className="ticker-item">
 						{quote.symbol}:  <TickerPrice price={quote.price} />
 					</div>

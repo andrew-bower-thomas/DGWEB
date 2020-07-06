@@ -5,8 +5,6 @@ import TechImage from '../assets/images/creative-internet-computer-display-20041
 import FinanceImage from '../assets/images/blue-and-yellow-graph-on-stock-market-monitor-159888.jpg';
 
 export class WhatWeDo extends Component {
-	static displayName = WhatWeDo.name;
-
 	render() {
 		return (
 			<div className="tab-content" id="what-we-do">

@@ -19,10 +19,6 @@ namespace DGWEB.Services
 		public QuoteService()
 		{
 			QuotesDB = new ConcurrentDictionary<string, Quote>();
-			foreach (string symbol in SymbolList)
-			{
-				QuotesDB.TryAdd(symbol, new Quote(symbol, 0));
-			}
 			MD = new TCMarketData(this);
 
 			UpdateQuotes();
@@ -31,7 +27,7 @@ namespace DGWEB.Services
 
 		private static void SetTimer()
 		{
-			Tmr = new System.Timers.Timer(1000);
+			Tmr = new System.Timers.Timer(500);
 			Tmr.Elapsed += OnTimedEvent;
 			Tmr.AutoReset = true;
 			Tmr.Enabled = true;
@@ -52,7 +48,7 @@ namespace DGWEB.Services
 
 		public void OnQuote(TCQuote q)
 		{
-			QuotesDB[q.Symbol].Price = q.Last;
+			QuotesDB[q.Symbol] = new Quote(q.Symbol, DateTime.Now, q.Last);
 		}
 
 		public IEnumerable<Quote> GetQuotes()

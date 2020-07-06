@@ -4,8 +4,6 @@ import './css/TabContent.css';
 import monaLisa from '../assets/images/mona-lisa.jpg';
 
 export class WhoWeAre extends Component {
-	static displayName = WhoWeAre.name;
-
 	render() {
 		return (
 			<div className="tab-content" id="who-we-are">

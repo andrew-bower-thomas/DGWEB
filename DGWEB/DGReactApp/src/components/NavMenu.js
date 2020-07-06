@@ -1,35 +1,34 @@
 import React, { Component } from 'react';
-import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { NavLink as RRNavLink } from 'react-router-dom';
 import './css/NavMenu.css';
 import LogoInline from '../assets/images/logo-inline.png'; //https://www.namecheap.com/logo-maker/app/new
 
 export class NavMenu extends Component {
-	static displayName = NavMenu.name;
-
 	constructor (props) {
 		super(props);
+
 		this.handleOnClick = this.handleOnClick.bind(this);
 		this.toggleNavbar = this.toggleNavbar.bind(this);
-		this.state = { collapsed: true };
+		this.state = { isCollapsed: true };
 	}
 
 	handleOnClick() {
-		this.setState({ collapsed: true });
+		this.setState({ isCollapsed: true });
 	}
 
 	toggleNavbar () {
-		this.setState({ collapsed: !this.state.collapsed });
+		this.setState({ isCollapsed: !this.state.isCollapsed });
 	}
 
 	render () {
 		return (
 			<header>
-				<Navbar className="navbar-expand-sm navbar-toggleable-sm box-shadow mb-3">
+				<Navbar className="navbar-expand-md navbar-toggleable-md mb-3">
 					<Container fluid>
 						<NavbarBrand tag={RRNavLink} onClick={this.handleOnClick} to="/"><img src={LogoInline} alt="DevGroup" id="logo-navbar" /></NavbarBrand>
 						<NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-						<Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
+						<Collapse className="d-md-inline-flex flex-md-row-reverse" isOpen={!this.state.isCollapsed} navbar>
 							<ul className="navbar-nav flex-grow">
 								<NavItem>
 									<NavLink exact tag={RRNavLink} onClick={this.handleOnClick} className="" activeClassName="active" to="/">
@@ -56,6 +55,18 @@ export class NavMenu extends Component {
 										CONTACT&nbsp;US
 									</NavLink>
 								</NavItem>
+								<UncontrolledDropdown nav inNavbar>
+									<DropdownToggle nav caret>
+										PROJECTS
+									</DropdownToggle>
+									<DropdownMenu right>
+										<DropdownItem>
+											<NavLink exact tag={RRNavLink} onClick={this.handleOnClick} className="" activeClassName="active" to="/projects/tz-screener">
+												TRADEZERO&nbsp;STOCK&nbsp;SCREENER
+											</NavLink>
+										</DropdownItem>
+									</DropdownMenu>
+								</UncontrolledDropdown>
 							</ul>
 						</Collapse>
 					</Container>

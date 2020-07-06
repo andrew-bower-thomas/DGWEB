@@ -3,8 +3,6 @@ import './css/OurWork.css';
 import './css/TabContent.css';
 
 export class OurWork extends Component {
-	static displayName = OurWork.name;
-
 	render() {
 		return (
 			<div className="tab-content" id="our-work">

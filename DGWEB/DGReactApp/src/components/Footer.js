@@ -2,8 +2,6 @@
 import './css/Footer.css';
 
 export class Footer extends Component {
-	static displayName = Footer.name;
-
 	render() {
 		return (
 			<footer className="footer" id="footer">
