@@ -107,10 +107,13 @@ export class HCChart extends Component {
 				}
 			});
 		}
-
-		if (Highcharts.charts.length > 0) {
-			Highcharts.charts[0].reflow();
-		}
+		
+		//https://github.com/highcharts/highcharts/issues/2431
+		Highcharts.charts.forEach(chart => {
+			if (chart !== undefined) {
+				chart.reflow();
+            }
+		});
 	}
 
 	getChartTitle(symbol) {
