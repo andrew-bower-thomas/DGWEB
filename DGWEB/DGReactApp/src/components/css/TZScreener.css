@@ -1,12 +1,53 @@
 ﻿#tz-screener {
-    background-color: black;
+	background-color: black;
 }
 
 #tz-screener-header {
-    text-align: center;
-    padding: 15px;
+	text-align: center;
+	padding: 15px;
 }
 
 #tz-screener-header > img {
-    width: 200px;
+	width: 200px;
+}
+
+#tz-screener-content {
+}
+
+.screener-column {
+	height: 100%;
+}
+
+#tz-screener-left {
+	background-color: #107d48;
+	width: 200px;
+}
+
+#tz-screener-left .dropdown-toggle {
+	width: 100%;
+}
+
+#tz-screener-left .dropdown-menu {
+	width: 100%;
+	max-height: 600px;
+	overflow-y: auto;
+}
+
+#tz-screener-middle {
+	/*background-color: black;*/
+}
+
+#tz-screener-right {
+	background-color: #323167;
+	width: 200px;
+}
+
+#tz-screener-right table {
+	background-color: transparent;
+	color: white;
+	word-break: break-all
+}
+
+#tz-screener-right tbody {
+	font-size: 0.65em;
 }

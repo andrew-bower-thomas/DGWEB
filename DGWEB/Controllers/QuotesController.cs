@@ -8,21 +8,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DGWEB.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class QuotesController : ControllerBase
-    {
-        public QuoteService QuoteService;
+	[Route("api/[controller]")]
+	[ApiController]
+	public class QuotesController : ControllerBase
+	{
+		public MarketDataService MarketDataHostedService;
 
-        public QuotesController(QuoteService quoteService)
-        {
-            QuoteService = quoteService;
-        }
+		public QuotesController(MarketDataService marketDataHostedService)
+		{
+			MarketDataHostedService = marketDataHostedService;
+		}
 
-        [HttpGet]
-        public IEnumerable<Quote> Get()
-        {
-            return QuoteService.GetQuotes();
-        }
-    }
+		[HttpGet]
+		public IEnumerable<Quote> Get()
+		{
+			return MarketDataHostedService.GetMostRecentQuotes();
+		}
+	}
 }
